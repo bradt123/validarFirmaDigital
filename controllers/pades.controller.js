@@ -1,3 +1,4 @@
+const pdfsig = require('pdfsig');
 const { crudController } = require('mini-mvcs');
 
 module.exports = (router, services) => {
@@ -10,5 +11,12 @@ module.exports = (router, services) => {
     return {
       status: 'El servicio se encuentra disponible',
     };
+
+  });
+
+  router.get('/firma', (req, res) => {
+    const firmas = new pdfsig('./test/prueba.pdf');
+    return firmas;
+
   });
 };

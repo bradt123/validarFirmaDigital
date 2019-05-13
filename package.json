@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "mini-mvcs": "^0.5.0",
-    "sqlite3": "^4.0.8"
+    "sqlite3": "^4.0.8",
+    "pdfsig": "1.0.1"
   }
 }
