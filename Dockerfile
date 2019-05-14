@@ -1,33 +1,12 @@
-FROM node:10.15.3-stretch-slim
+FROM timbru31/java-node:adoptopenjdk-alpine-slim
 
 LABEL maintainer="Juan Pablo Poma Chuquimia"
 
-WORKDIR /home/node/app
+WORKDIR /usr/src/app
+COPY package.json ./
 
-COPY --chown=node:node . .
-
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        g++ \
-        libnspr4-dev \
-        libnss3-dev \
-        libpoppler-private-dev \
-        make \
-        pkg-config \
-        python \
-    && npm install \
-    && apt-get purge -y --autoremove \
-        g++ \
-        make \
-        pkg-config \
-        python \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && chown -R node:node /home/node/app
-
-# COPY --chown=node:node . .
-
-USER node
+RUN npm install 
+COPY . .
 
 EXPOSE 4000
 
