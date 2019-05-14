@@ -1,6 +1,7 @@
 ## Introducción
-recupera los datos de firma digital de un pdf 
-necesita tener instalado java 8
+Recupera los datos de firma digital de un pdf 
+para ejecutar el server node (para desarrollo) se necesita 
+node 10 y java 8
 ## Ejecutar contenedor
 Tener instalado docker y ejecutar
 ```
