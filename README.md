@@ -1,7 +1,7 @@
 ## Introducción
 Recupera los datos de firma digital de un pdf 
 para ejecutar el server node (para desarrollo) se necesita 
-node 10 y java 8
+node 10 y java 8 breydi .vasquez
 ## Ejecutar contenedor
 Tener instalado docker y ejecutar
 ```
